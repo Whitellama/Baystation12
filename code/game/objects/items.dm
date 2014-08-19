@@ -53,14 +53,14 @@
 	Works similarly to worn sprite_sheets, except the alternate sprites are used when the clothing/refit_for_species() proc is called.
 	*/
 	var/list/sprite_sheets_obj = null
-	
+
 	//Inhand is not as big a deal as the object sprites, so I'm not sure if these are worth the extra vars.
 	//Maybe in the future:
 	//var/list/sprite_sheets_inhand_l = null
 	//var/list/sprite_sheets_inhand_r = null
 	//var/icon_l_hand = 'icons/mob/items_lefthand.dmi'
 	//var/icon_r_hand = 'icons/mob/items_righthand.dmi'
-	
+
 /obj/item/device
 	icon = 'icons/obj/device.dmi'
 
@@ -157,7 +157,7 @@
 	src.pickup(user)
 	add_fingerprint(user)
 	user.put_in_active_hand(src)
-	return
+	return 1
 
 
 /obj/item/attack_paw(mob/user as mob)
